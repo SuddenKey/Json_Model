@@ -28,6 +28,7 @@
 		A019340F200F3AB20021122F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D765771FD5268900279083 /* LaunchScreen.storyboard */; };
 		A0193410200F3AB20021122F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D765751FD5268900279083 /* Assets.xcassets */; };
 		A0193411200F3AB20021122F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D765721FD5268900279083 /* Main.storyboard */; };
+		A019341A201175CE0021122F /* longToChange.m in Sources */ = {isa = PBXBuildFile; fileRef = A0193419201175CE0021122F /* longToChange.m */; };
 		A0D7656E1FD5268900279083 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D7656D1FD5268900279083 /* AppDelegate.m */; };
 		A0D765711FD5268900279083 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D765701FD5268900279083 /* ViewController.m */; };
 		A0D765741FD5268900279083 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D765721FD5268900279083 /* Main.storyboard */; };
@@ -74,6 +75,8 @@
 		A01933D1200F3A710021122F /* TextHAHAHAHAHHA copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TextHAHAHAHAHHA copy-Info.plist"; path = "/Users/haohao/Desktop/TextHAHAHAHAHHA/TextHAHAHAHAHHA copy-Info.plist"; sourceTree = "<absolute>"; };
 		A0193415200F3AB20021122F /* TextHAHAHAHAHHA copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TextHAHAHAHAHHA copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0193416200F3AB20021122F /* TextHAHAHAHAHHA copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TextHAHAHAHAHHA copy2-Info.plist"; path = "/Users/haohao/Desktop/TextHAHAHAHAHHA/TextHAHAHAHAHHA copy2-Info.plist"; sourceTree = "<absolute>"; };
+		A0193418201175CE0021122F /* longToChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = longToChange.h; sourceTree = "<group>"; };
+		A0193419201175CE0021122F /* longToChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = longToChange.m; sourceTree = "<group>"; };
 		A0D765691FD5268900279083 /* TextHAHAHAHAHHA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextHAHAHAHAHHA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0D7656C1FD5268900279083 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A0D7656D1FD5268900279083 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +157,15 @@
 			path = PJX_JSON;
 			sourceTree = "<group>";
 		};
+		A0193417201175910021122F /* longToChange */ = {
+			isa = PBXGroup;
+			children = (
+				A0193418201175CE0021122F /* longToChange.h */,
+				A0193419201175CE0021122F /* longToChange.m */,
+			);
+			path = longToChange;
+			sourceTree = "<group>";
+		};
 		A0D765601FD5268900279083 = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +192,7 @@
 		A0D7656B1FD5268900279083 /* TextHAHAHAHAHHA */ = {
 			isa = PBXGroup;
 			children = (
+				A0193417201175910021122F /* longToChange */,
 				A01933B1200EF6810021122F /* PJX_JSON */,
 				A01933AA200EEDE60021122F /* Json_model */,
 				A0D7656C1FD5268900279083 /* AppDelegate.h */,
@@ -407,6 +420,7 @@
 				A01933A6200EDFED0021122F /* PJXClassPropert.m in Sources */,
 				A0D7656E1FD5268900279083 /* AppDelegate.m in Sources */,
 				A01933AD200EEDFF0021122F /* SuperModel.m in Sources */,
+				A019341A201175CE0021122F /* longToChange.m in Sources */,
 				A01933B7200EF8300021122F /* PJXPropertyInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

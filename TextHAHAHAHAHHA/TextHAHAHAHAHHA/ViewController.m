@@ -28,6 +28,8 @@
     peopleModel *model = [[peopleModel alloc] init];
     [model setValuesForKeysWithDictionary:dic];
     NSLog(@"model.name = %@, model.age = %@, model.address = %@， model.other = %@， model.myID = %@", model.name, model.age, model.address, model.other, model.myID);
+    NSString *num = @"52445649151526675485126179718808368622015837477597399279545958780083787821736";
+    long long rom = [num longLongValue] / 1000000;
     
 }
 
