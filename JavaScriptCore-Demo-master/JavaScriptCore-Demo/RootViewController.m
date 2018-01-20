@@ -5,9 +5,12 @@
 //  Created by Jakey on 14/12/25.
 //  Copyright (c) 2014年 www.skyfox.org. All rights reserved.
 //
+#import "UIViewController+AddotherProperty.h"
 
 #import "RootViewController.h"
 #import <JavaScriptCore/JavaScriptCore.h>
+#import "NSString+ZDY.h"
+
 @interface RootViewController ()
 
 @end
@@ -16,9 +19,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self addLeftBtn:@selector(back)];
+//    [self.leftBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)back {
     
 }
+
 - (NSString *)loadJsFile:(NSString*)fileName
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:fileName ofType:@"js"];

@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "TabBarController.h"
 #import "RootViewController.h"
 
 @implementation AppDelegate
@@ -17,9 +17,12 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
-    self.viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
-    self.navgationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
-    self.window.rootViewController = self.navgationController;
+//    self.viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+//    self.navgationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
+    
+    
+    TabBarController *tab = [[TabBarController alloc] init];
+    self.window.rootViewController = tab;
     [self.window makeKeyAndVisible];
     return YES;
 }

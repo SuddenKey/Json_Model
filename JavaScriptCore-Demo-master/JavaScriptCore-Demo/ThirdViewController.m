@@ -8,7 +8,7 @@
 
 #import "ThirdViewController.h"
 #import <WebKit/WebKit.h>
-
+//https://api.zjhemai.com/clientweb/index.html  uid=73
 @interface ThirdViewController ()<WKNavigationDelegate,WKUIDelegate,WKScriptMessageHandler>
 
 @property (strong, nonatomic) WKWebView *webView;
@@ -17,6 +17,11 @@
 @end
 
 @implementation ThirdViewController
+
+- (void)dealloc
+{
+    [_webView.configuration.userContentController removeScriptMessageHandlerForName:@"NativeMethod"];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -27,6 +32,12 @@
     congfig.userContentController = usercontent;
     
     
+    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] init];
+    [request setHTTPMethod:@"POST"];
+    //设置参数
+    [request setHTTPBody:[@"user=1" dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    
     _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height) configuration:congfig];
     _webView.scrollView.scrollEnabled = NO;
     _webView.UIDelegate = self;
@@ -34,12 +45,16 @@
     [self.view addSubview:_webView];
     
     NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
-    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
+//    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
     [self.webView loadRequest:request];
 }
 
 #pragma mark - WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    
+}
+
+- (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
     
 }
 
