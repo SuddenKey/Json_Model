@@ -7,9 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LeftBtnView.h"
 @interface BaseViewController : UINavigationController
-
-@property (nonatomic, strong) LeftBtnView *leftView;
 
 @end

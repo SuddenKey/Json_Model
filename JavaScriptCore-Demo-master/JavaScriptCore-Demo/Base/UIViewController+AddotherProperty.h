@@ -12,8 +12,11 @@
 
 @property (nonatomic, strong) UIButton *leftBtn;
 
+@property (nonatomic, strong) UIButton *rightBtn;
+
+
 //@property (nonatomic, assign) SEL leftClickBtn;
 
-- (void)addLeftBtn:(SEL)click;
+//- (void)addLeftBtn:(SEL)click;
 
 @end

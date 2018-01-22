@@ -19,13 +19,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self addLeftBtn:@selector(back)];
-//    [self.leftBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+//    [self addLeftBtn:@selector(back)];
+    [self.leftBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
     // Do any additional setup after loading the view from its nib.
 }
 
 - (void)back {
-    
+    JSCallOCViewController *jsCallOC = [[JSCallOCViewController alloc]init];
+    [self.navigationController pushViewController:jsCallOC animated:YES];
 }
 
 - (NSString *)loadJsFile:(NSString*)fileName

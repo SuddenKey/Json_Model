@@ -16,27 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-    
     // Do any additional setup after loading the view.
 }
 
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated {
     if (self.childViewControllers.count > 0) {
-        _leftView = [[LeftBtnView alloc] init];
-        
-        
-//        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-//        backBtn.frame = CGRectMake(20, 20, 60, 40);
-//        [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-//        [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-//        [backBtn setImage:[UIImage imageNamed:@"navi_return"] forState:UIControlStateNormal];
-//        [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 30)];
-//        [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
-        
-        
-        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:_leftView];
+        UIButton *backBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        backBtn.frame = CGRectMake(20, 20, 60, 40);
+        [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+        [backBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"navi_return"] forState:UIControlStateNormal];
+        [backBtn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 30)];
+        [backBtn addTarget:self action:@selector(back) forControlEvents:UIControlEventTouchUpInside];
+        viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
         viewController.hidesBottomBarWhenPushed = YES;
     }
     [super pushViewController:viewController animated:animated];

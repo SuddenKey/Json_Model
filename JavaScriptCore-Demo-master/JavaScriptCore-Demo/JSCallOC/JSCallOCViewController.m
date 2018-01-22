@@ -8,6 +8,8 @@
 
 #import "JSCallOCViewController.h"
 #import "SecondViewController.h"
+#import "UIViewController+AddotherProperty.h"
+
 @interface JSCallOCViewController ()
 
 @end
@@ -28,11 +30,11 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     self.title = @"js call oc";
-    
     NSString *path = [[[NSBundle mainBundle] bundlePath]  stringByAppendingPathComponent:@"JSCallOC.html"];
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL fileURLWithPath:path]];
     [self.webView loadRequest:request];
 }
+
 
 #pragma mark - UIWebViewDelegate
 
