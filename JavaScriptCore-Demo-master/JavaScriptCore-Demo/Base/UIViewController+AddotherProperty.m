@@ -74,6 +74,7 @@ static const void *tagKey = &tagKey;
     return objc_getAssociatedObject(self, @selector(rightBtn));
 }
 
+
 - (void)setRightBtn:(UIButton *)rightBtn {
     objc_setAssociatedObject(self, @selector(rightBtn), rightBtn, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
