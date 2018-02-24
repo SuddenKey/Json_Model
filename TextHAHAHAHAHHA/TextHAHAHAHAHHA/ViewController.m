@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "peopleModel.h"
+#import "endLessScro.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
@@ -20,7 +21,14 @@
     [super viewDidLoad];
 //    [self setSubView];
 //    [self createRunloop];
-    [self setJson_Model];
+//    [self setJson_Model];
+    [self setScr];
+}
+
+- (void)setScr {
+    endLessScro *lessScr = [[endLessScro alloc] initWithDur:5 frame:CGRectMake(0, 0, 100, 100)];
+    lessScr.center = self.view.center;
+    [self.view addSubview:lessScr];
 }
 
 - (void)setJson_Model {
