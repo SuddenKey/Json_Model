@@ -9,10 +9,12 @@
 #import "ViewController.h"
 #import "peopleModel.h"
 #import "endLessScro.h"
+#import <AVFoundation/AVFoundation.h>
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
-
+@property (nonatomic, strong) AVAudioPlayer *player;
 @end
 
 @implementation ViewController
@@ -22,7 +24,29 @@
 //    [self setSubView];
 //    [self createRunloop];
 //    [self setJson_Model];
-    [self setScr];
+//    [self setScr];
+    UIButton *clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [clickBtn setBackgroundColor:[UIColor redColor]];
+    clickBtn.center = self.view.center;
+    clickBtn.frame = CGRectMake(0, 0, 100, 100);
+    [clickBtn addTarget:self action:@selector(playMp3) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:clickBtn];
+}
+
+- (void)playMp3 {
+    [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error: nil];
+    //音乐路径
+    NSString *ringPath = [[NSBundle mainBundle] pathForResource:@"ding" ofType:@"wav"];
+    NSURL *url = [NSURL fileURLWithPath:ringPath];
+    //创建播放器
+    _player = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:nil];
+    //预播放
+    [_player prepareToPlay];
+    //循环播放
+    _player.numberOfLoops = 1;
+    //音量大小
+    _player.volume = 1.0;
+    [_player play];
 }
 
 - (void)setScr {

@@ -40,6 +40,8 @@
 		A0D765861FD5268A00279083 /* TextHAHAHAHAHHATests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D765851FD5268A00279083 /* TextHAHAHAHAHHATests.m */; };
 		A0D765911FD5268A00279083 /* TextHAHAHAHAHHAUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D765901FD5268A00279083 /* TextHAHAHAHAHHAUITests.m */; };
 		A0D765A11FD52C6700279083 /* TEXTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D7659F1FD52C6700279083 /* TEXTTableViewCell.m */; };
+		A0EE8CF12043DABE000700EC /* aaaa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0EE8CF02043DABE000700EC /* aaaa.mp3 */; };
+		A0F6CC7320440BA600476BDC /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0F6CC7220440BA600476BDC /* ding.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,8 @@
 		A0D765921FD5268A00279083 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0D7659E1FD52C6700279083 /* TEXTTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TEXTTableViewCell.h; sourceTree = "<group>"; };
 		A0D7659F1FD52C6700279083 /* TEXTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEXTTableViewCell.m; sourceTree = "<group>"; };
+		A0EE8CF02043DABE000700EC /* aaaa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aaaa.mp3; sourceTree = "<group>"; };
+		A0F6CC7220440BA600476BDC /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 			children = (
 				A0C28DEB204109610027B789 /* endLessScro.h */,
 				A0C28DEC204109610027B789 /* endLessScro.m */,
+				A0EE8CF02043DABE000700EC /* aaaa.mp3 */,
+				A0F6CC7220440BA600476BDC /* ding.wav */,
 			);
 			path = EndlessScr;
 			sourceTree = "<group>";
@@ -383,8 +389,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0F6CC7320440BA600476BDC /* ding.wav in Resources */,
 				A0D765791FD5268900279083 /* LaunchScreen.storyboard in Resources */,
 				A0D765761FD5268900279083 /* Assets.xcassets in Resources */,
+				A0EE8CF12043DABE000700EC /* aaaa.mp3 in Resources */,
 				A0D765741FD5268900279083 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
