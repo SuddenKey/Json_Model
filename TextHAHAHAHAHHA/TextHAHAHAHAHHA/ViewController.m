@@ -10,7 +10,7 @@
 #import "peopleModel.h"
 #import "endLessScro.h"
 #import <AVFoundation/AVFoundation.h>
-
+#import "textA.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
@@ -21,19 +21,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+//    textA *text = [[textA alloc] init];
+//    [text NSlogText];
+    
 //    [self setSubView];
 //    [self createRunloop];
 //    [self setJson_Model];
 //    [self setScr];
+    
+}
+
+- (void)playMp3 {
     UIButton *clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [clickBtn setBackgroundColor:[UIColor redColor]];
     clickBtn.center = self.view.center;
     clickBtn.frame = CGRectMake(0, 0, 100, 100);
     [clickBtn addTarget:self action:@selector(playMp3) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:clickBtn];
-}
-
-- (void)playMp3 {
+    
     [[AVAudioSession sharedInstance] setCategory:AVAudioSessionCategoryPlayback error: nil];
     //音乐路径
     NSString *ringPath = [[NSBundle mainBundle] pathForResource:@"ding" ofType:@"wav"];

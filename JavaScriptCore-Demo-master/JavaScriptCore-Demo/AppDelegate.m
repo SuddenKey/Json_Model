@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "TabBarController.h"
 #import "RootViewController.h"
-
+#import "textA.h"
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -20,6 +20,8 @@
 //    self.viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
 //    self.navgationController = [[UINavigationController alloc]initWithRootViewController:self.viewController];
     
+    textA *text = [[textA alloc] init];
+    [text NSlogText];
     
     TabBarController *tab = [[TabBarController alloc] init];
     self.window.rootViewController = tab;

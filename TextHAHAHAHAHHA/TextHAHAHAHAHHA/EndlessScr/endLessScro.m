@@ -10,17 +10,28 @@
 #define selfHeight   self.frame.size.height
 
 #import "endLessScro.h"
+#import "UILabel+Add_Tag.h"
 
 @interface endLessScro()<UIScrollViewDelegate> {
     NSInteger _pageNumber;
     NSInteger currPage;
     NSInteger timeRecond;
     UIScrollView *scr;
+    NSTimer *timeZone;
 }
+
+@property (nonatomic, strong) NSMutableArray *dataArray;
 
 @end
 
 @implementation endLessScro
+
+- (NSMutableArray *)dataArray {
+    if (_dataArray == nil) {
+        _dataArray = [NSMutableArray array];
+    }
+    return _dataArray;
+}
 
 - (instancetype)initWithDur:(NSInteger)number frame:(CGRect)frame{
     self = [super init];
@@ -33,7 +44,7 @@
 }
 
 - (void)setUpSubView {
-    scr = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, selfWidth, selfHeight)];
+    scr = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, selfWidth * 3, selfHeight)];
     scr.userInteractionEnabled = YES;
     scr.pagingEnabled = YES;
     scr.delegate = self;
@@ -48,27 +59,51 @@
     for (int i = 0; i < _pageNumber; i++) {
         UILabel *backLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * selfWidth, 5, selfWidth - 10, selfHeight -10)];
         backLabel.backgroundColor = [UIColor yellowColor];
-        backLabel.text = [NSString stringWithFormat:@"%d", i];
+        backLabel.baseTag = [NSString stringWithFormat:@"%d", i];
+        backLabel.text = backLabel.baseTag;
         backLabel.textAlignment = NSTextAlignmentCenter;
         backLabel.textColor = [UIColor blackColor];
         [scr addSubview:backLabel];
+        [self.dataArray addObject:backLabel];
     }
     
-    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
-        timeRecond ++;
-        [scr setContentOffset:CGPointMake(selfWidth * 1, 0) animated:YES];
-        currPage = timeRecond % 5;
-    }];
-    [time fire];
+//    NSTimer *time = [NSTimer scheduledTimerWithTimeInterval:3 repeats:YES block:^(NSTimer * _Nonnull timer) {
+//        timeRecond ++;
+//        [scr setContentOffset:CGPointMake(selfWidth * 1, 0) animated:YES];
+//        currPage = timeRecond % 5;
+//    }];
+//        [time fire];
+    NSTimer *timeZone = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(scr:) userInfo:nil repeats:YES];
+    [timeZone fire];
+}
+
+- (void)scr:(NSTimer *)sender{
+    currPage ++;
+    for (int i = 0; i < self.dataArray.count; i++) {
+        UILabel *base = self.dataArray[i];
+        NSLog(@"%@", base);
+    }
+    CGFloat contentOffsetX = ( (int)(scr.contentOffset.x +selfWidth) / (int)selfWidth ) * selfWidth;
+    CGPoint newOffset = CGPointMake(contentOffsetX, 0);
+    [scr setContentOffset:newOffset animated:YES];
 }
 
 #pragma mark - UIScrollViewDelegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    // 当手动滑动时 暂停定时器
+    [timeZone invalidate];
+}
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    [timeZone fire];
+    // 当手动滑动结束时 开启定时器
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [scr.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     for (int i = 0; i < _pageNumber; i++) {
 
         UILabel *backLabel = [[UILabel alloc] initWithFrame:CGRectMake(i * selfWidth, 5, selfWidth - 10, selfHeight - 10)];
-        if (i < _pageNumber) {
+        if (i <= _pageNumber) {
             backLabel.text = [NSString stringWithFormat:@"%ld", currPage + i];
         } else {
             backLabel.text = [NSString stringWithFormat:@"%ld", currPage - (currPage - i)];
@@ -78,8 +113,12 @@
         backLabel.textColor = [UIColor blackColor];
         [scr addSubview:backLabel];
     }
-    
-    [scr setContentOffset:CGPointMake(0, 0) animated:YES];
+
+    [scr setContentOffset:CGPointMake(0, 0)];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
+    [scr setContentOffset:CGPointMake(selfWidth, 0) animated:YES];
 }
 
 @end

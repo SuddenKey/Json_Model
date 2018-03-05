@@ -14,6 +14,7 @@
 		A01934292012EACE0021122F /* LeftBtnView.m in Sources */ = {isa = PBXBuildFile; fileRef = A01934282012EACE0021122F /* LeftBtnView.m */; };
 		A019342C201308B10021122F /* UIViewController+AddotherProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = A019342B201308B10021122F /* UIViewController+AddotherProperty.m */; };
 		A0193430201310C10021122F /* NSString+ZDY.m in Sources */ = {isa = PBXBuildFile; fileRef = A019342F201310C10021122F /* NSString+ZDY.m */; };
+		A05D3DFF204CE93700D7E067 /* libtextA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A05D3DFD204CE93700D7E067 /* libtextA.a */; };
 		A21E7E211A4CE721009BEB8E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A21E7E201A4CE721009BEB8E /* main.m */; };
 		A21E7E241A4CE721009BEB8E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A21E7E231A4CE721009BEB8E /* AppDelegate.m */; };
 		A21E7E2C1A4CE721009BEB8E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A21E7E2B1A4CE721009BEB8E /* Images.xcassets */; };
@@ -61,6 +62,8 @@
 		A019342D201309230021122F /* UIViewController+add.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+add.h"; sourceTree = "<group>"; };
 		A019342E201310C10021122F /* NSString+ZDY.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+ZDY.h"; sourceTree = "<group>"; };
 		A019342F201310C10021122F /* NSString+ZDY.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+ZDY.m"; sourceTree = "<group>"; };
+		A05D3DFD204CE93700D7E067 /* libtextA.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libtextA.a; sourceTree = "<group>"; };
+		A05D3DFE204CE93700D7E067 /* textA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = textA.h; sourceTree = "<group>"; };
 		A21E7E1B1A4CE721009BEB8E /* JavaScriptCore-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "JavaScriptCore-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A21E7E1F1A4CE721009BEB8E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A21E7E201A4CE721009BEB8E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -98,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05D3DFF204CE93700D7E067 /* libtextA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -155,6 +159,8 @@
 				A21E7E491A4CE866009BEB8E /* test.js */,
 				A21E7E221A4CE721009BEB8E /* AppDelegate.h */,
 				A21E7E231A4CE721009BEB8E /* AppDelegate.m */,
+				A05D3DFD204CE93700D7E067 /* libtextA.a */,
+				A05D3DFE204CE93700D7E067 /* textA.h */,
 				A01934232012E3DC0021122F /* TabBarController.h */,
 				A01934242012E3DC0021122F /* TabBarController.m */,
 				A21E7E441A4CE746009BEB8E /* RootViewController.h */,
@@ -481,6 +487,10 @@
 				DEVELOPMENT_TEAM = 5HQ43E8K7M;
 				INFOPLIST_FILE = "JavaScriptCore-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JavaScriptCore-Demo",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -497,6 +507,10 @@
 				DEVELOPMENT_TEAM = 5HQ43E8K7M;
 				INFOPLIST_FILE = "JavaScriptCore-Demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/JavaScriptCore-Demo",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
