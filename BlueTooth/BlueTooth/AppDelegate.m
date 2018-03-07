@@ -1,9 +1,9 @@
 //
 //  AppDelegate.m
-//  TextHAHAHAHAHHA
+//  BlueTooth
 //
-//  Created by haohao on 2017/12/4.
-//  Copyright © 2017年 haohao. All rights reserved.
+//  Created by haohao on 2018/3/7.
+//  Copyright © 2018年 haohao. All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,7 +17,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
     return YES;
 }
 

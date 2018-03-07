@@ -29,7 +29,12 @@
 		A0193410200F3AB20021122F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0D765751FD5268900279083 /* Assets.xcassets */; };
 		A0193411200F3AB20021122F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0D765721FD5268900279083 /* Main.storyboard */; };
 		A019341A201175CE0021122F /* longToChange.m in Sources */ = {isa = PBXBuildFile; fileRef = A0193419201175CE0021122F /* longToChange.m */; };
-		A05D3DF8204CE75600D7E067 /* textFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A05D3DF7204CE75500D7E067 /* textFramework.framework */; };
+		A05D3E04204CEEB000D7E067 /* CollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D3E03204CEEB000D7E067 /* CollectionViewController.m */; };
+		A05D3E08204CEF8B00D7E067 /* EndLessCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D3E06204CEF8B00D7E067 /* EndLessCollectionViewCell.m */; };
+		A05D3E09204CEF8B00D7E067 /* EndLessCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A05D3E07204CEF8B00D7E067 /* EndLessCollectionViewCell.xib */; };
+		A05D3E0C204D078800D7E067 /* EndLessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D3E0B204D078800D7E067 /* EndLessViewController.m */; };
+		A05D3E16204D377A00D7E067 /* EndLessUITableView.m in Sources */ = {isa = PBXBuildFile; fileRef = A05D3E15204D377A00D7E067 /* EndLessUITableView.m */; };
+		A06C57ED204FB98C00550C58 /* ToothDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = A06C57EC204FB98C00550C58 /* ToothDevice.m */; };
 		A0AEA19020454FA200C0EFCD /* UILabel+Add_Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = A0AEA18F20454FA200C0EFCD /* UILabel+Add_Tag.m */; };
 		A0C1D506202308960046A683 /* UnlimitScr.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C1D505202308960046A683 /* UnlimitScr.m */; };
 		A0C28DED204109610027B789 /* endLessScro.m in Sources */ = {isa = PBXBuildFile; fileRef = A0C28DEC204109610027B789 /* endLessScro.m */; };
@@ -44,6 +49,7 @@
 		A0D765A11FD52C6700279083 /* TEXTTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A0D7659F1FD52C6700279083 /* TEXTTableViewCell.m */; };
 		A0EE8CF12043DABE000700EC /* aaaa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = A0EE8CF02043DABE000700EC /* aaaa.mp3 */; };
 		A0F6CC7320440BA600476BDC /* ding.wav in Resources */ = {isa = PBXBuildFile; fileRef = A0F6CC7220440BA600476BDC /* ding.wav */; };
+		A0FFC2D9204F70E9008455C1 /* BlueToothViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A0FFC2D8204F70E9008455C1 /* BlueToothViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +89,17 @@
 		A0193416200F3AB20021122F /* TextHAHAHAHAHHA copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TextHAHAHAHAHHA copy2-Info.plist"; path = "/Users/haohao/Desktop/TextHAHAHAHAHHA/TextHAHAHAHAHHA copy2-Info.plist"; sourceTree = "<absolute>"; };
 		A0193418201175CE0021122F /* longToChange.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = longToChange.h; sourceTree = "<group>"; };
 		A0193419201175CE0021122F /* longToChange.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = longToChange.m; sourceTree = "<group>"; };
-		A05D3DF7204CE75500D7E067 /* textFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = textFramework.framework; sourceTree = "<group>"; };
+		A05D3E02204CEEB000D7E067 /* CollectionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewController.h; sourceTree = "<group>"; };
+		A05D3E03204CEEB000D7E067 /* CollectionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CollectionViewController.m; sourceTree = "<group>"; };
+		A05D3E05204CEF8B00D7E067 /* EndLessCollectionViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndLessCollectionViewCell.h; sourceTree = "<group>"; };
+		A05D3E06204CEF8B00D7E067 /* EndLessCollectionViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndLessCollectionViewCell.m; sourceTree = "<group>"; };
+		A05D3E07204CEF8B00D7E067 /* EndLessCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EndLessCollectionViewCell.xib; sourceTree = "<group>"; };
+		A05D3E0A204D078800D7E067 /* EndLessViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndLessViewController.h; sourceTree = "<group>"; };
+		A05D3E0B204D078800D7E067 /* EndLessViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndLessViewController.m; sourceTree = "<group>"; };
+		A05D3E14204D377A00D7E067 /* EndLessUITableView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EndLessUITableView.h; sourceTree = "<group>"; };
+		A05D3E15204D377A00D7E067 /* EndLessUITableView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EndLessUITableView.m; sourceTree = "<group>"; };
+		A06C57EB204FB98C00550C58 /* ToothDevice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToothDevice.h; sourceTree = "<group>"; };
+		A06C57EC204FB98C00550C58 /* ToothDevice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToothDevice.m; sourceTree = "<group>"; };
 		A0AEA18E20454FA200C0EFCD /* UILabel+Add_Tag.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UILabel+Add_Tag.h"; sourceTree = "<group>"; };
 		A0AEA18F20454FA200C0EFCD /* UILabel+Add_Tag.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Add_Tag.m"; sourceTree = "<group>"; };
 		A0C1D504202308960046A683 /* UnlimitScr.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnlimitScr.h; sourceTree = "<group>"; };
@@ -110,6 +126,8 @@
 		A0D7659F1FD52C6700279083 /* TEXTTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TEXTTableViewCell.m; sourceTree = "<group>"; };
 		A0EE8CF02043DABE000700EC /* aaaa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = aaaa.mp3; sourceTree = "<group>"; };
 		A0F6CC7220440BA600476BDC /* ding.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ding.wav; sourceTree = "<group>"; };
+		A0FFC2D7204F70E9008455C1 /* BlueToothViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueToothViewController.h; sourceTree = "<group>"; };
+		A0FFC2D8204F70E9008455C1 /* BlueToothViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueToothViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,7 +142,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A05D3DF8204CE75600D7E067 /* textFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -189,6 +206,29 @@
 			path = A;
 			sourceTree = "<group>";
 		};
+		A05D3E01204CEE7400D7E067 /* CollectionViewToEndless */ = {
+			isa = PBXGroup;
+			children = (
+				A05D3E02204CEEB000D7E067 /* CollectionViewController.h */,
+				A05D3E03204CEEB000D7E067 /* CollectionViewController.m */,
+				A05D3E05204CEF8B00D7E067 /* EndLessCollectionViewCell.h */,
+				A05D3E06204CEF8B00D7E067 /* EndLessCollectionViewCell.m */,
+				A05D3E07204CEF8B00D7E067 /* EndLessCollectionViewCell.xib */,
+				A05D3E0A204D078800D7E067 /* EndLessViewController.h */,
+				A05D3E0B204D078800D7E067 /* EndLessViewController.m */,
+			);
+			path = CollectionViewToEndless;
+			sourceTree = "<group>";
+		};
+		A05D3E13204D372E00D7E067 /* EndLessUITableView */ = {
+			isa = PBXGroup;
+			children = (
+				A05D3E14204D377A00D7E067 /* EndLessUITableView.h */,
+				A05D3E15204D377A00D7E067 /* EndLessUITableView.m */,
+			);
+			path = EndLessUITableView;
+			sourceTree = "<group>";
+		};
 		A0AE3025204CE2D4004798C8 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,7 +241,6 @@
 		A0AE3043204CE70B004798C8 /* FrameWork */ = {
 			isa = PBXGroup;
 			children = (
-				A05D3DF7204CE75500D7E067 /* textFramework.framework */,
 			);
 			path = FrameWork;
 			sourceTree = "<group>";
@@ -245,6 +284,9 @@
 		A0D7656B1FD5268900279083 /* TextHAHAHAHAHHA */ = {
 			isa = PBXGroup;
 			children = (
+				A0FFC2D6204F708D008455C1 /* BlueTooth */,
+				A05D3E13204D372E00D7E067 /* EndLessUITableView */,
+				A05D3E01204CEE7400D7E067 /* CollectionViewToEndless */,
 				A0AE3025204CE2D4004798C8 /* Library */,
 				A0C28DEA204109190027B789 /* EndlessScr */,
 				A0193417201175910021122F /* longToChange */,
@@ -283,6 +325,17 @@
 				A0D765921FD5268A00279083 /* Info.plist */,
 			);
 			path = TextHAHAHAHAHHAUITests;
+			sourceTree = "<group>";
+		};
+		A0FFC2D6204F708D008455C1 /* BlueTooth */ = {
+			isa = PBXGroup;
+			children = (
+				A0FFC2D7204F70E9008455C1 /* BlueToothViewController.h */,
+				A0FFC2D8204F70E9008455C1 /* BlueToothViewController.m */,
+				A06C57EB204FB98C00550C58 /* ToothDevice.h */,
+				A06C57EC204FB98C00550C58 /* ToothDevice.m */,
+			);
+			path = BlueTooth;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A0F6CC7320440BA600476BDC /* ding.wav in Resources */,
+				A05D3E09204CEF8B00D7E067 /* EndLessCollectionViewCell.xib in Resources */,
 				A0D765791FD5268900279083 /* LaunchScreen.storyboard in Resources */,
 				A0D765761FD5268900279083 /* Assets.xcassets in Resources */,
 				A0EE8CF12043DABE000700EC /* aaaa.mp3 in Resources */,
@@ -469,20 +523,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A05D3E04204CEEB000D7E067 /* CollectionViewController.m in Sources */,
 				A01933A9200EE9560021122F /* peopleModel.m in Sources */,
 				A01933B0200EF1F50021122F /* Json_Model.m in Sources */,
+				A05D3E08204CEF8B00D7E067 /* EndLessCollectionViewCell.m in Sources */,
 				A01933BA200F189B0021122F /* TestModel.m in Sources */,
+				A05D3E0C204D078800D7E067 /* EndLessViewController.m in Sources */,
 				A01933B4200EF7F80021122F /* PJXClassInfo.m in Sources */,
 				A0D765711FD5268900279083 /* ViewController.m in Sources */,
 				A0AEA19020454FA200C0EFCD /* UILabel+Add_Tag.m in Sources */,
+				A0FFC2D9204F70E9008455C1 /* BlueToothViewController.m in Sources */,
 				A0D7657C1FD5268A00279083 /* main.m in Sources */,
 				A0D765A11FD52C6700279083 /* TEXTTableViewCell.m in Sources */,
 				A0C1D506202308960046A683 /* UnlimitScr.m in Sources */,
 				A01933A6200EDFED0021122F /* PJXClassPropert.m in Sources */,
 				A0C28DED204109610027B789 /* endLessScro.m in Sources */,
+				A05D3E16204D377A00D7E067 /* EndLessUITableView.m in Sources */,
 				A0D7656E1FD5268900279083 /* AppDelegate.m in Sources */,
 				A01933AD200EEDFF0021122F /* SuperModel.m in Sources */,
 				A019341A201175CE0021122F /* longToChange.m in Sources */,
+				A06C57ED204FB98C00550C58 /* ToothDevice.m in Sources */,
 				A01933B7200EF8300021122F /* PJXPropertyInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -682,6 +742,7 @@
 					"$(PROJECT_DIR)/TextHAHAHAHAHHA/Library/FrameWork",
 				);
 				INFOPLIST_FILE = TextHAHAHAHAHHA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = haohao.TextHAHAHAHAHHA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -701,6 +762,7 @@
 					"$(PROJECT_DIR)/TextHAHAHAHAHHA/Library/FrameWork",
 				);
 				INFOPLIST_FILE = TextHAHAHAHAHHA/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = haohao.TextHAHAHAHAHHA;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -10,7 +10,10 @@
 #import "peopleModel.h"
 #import "endLessScro.h"
 #import <AVFoundation/AVFoundation.h>
-#import "textA.h"
+#import "CollectionViewController.h"
+#import "EndLessViewController.h"
+#import "BlueToothViewController.h"
+
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
@@ -28,8 +31,27 @@
 //    [self createRunloop];
 //    [self setJson_Model];
 //    [self setScr];
-    
+    [self pushToNextVC];
 }
+
+- (void)pushToNextVC {
+    UIButton *clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    clickBtn.frame = CGRectMake(0, 0, 100, 100);
+    [clickBtn setBackgroundColor:[UIColor redColor]];
+    [clickBtn addTarget:self action:@selector(nextVC) forControlEvents:UIControlEventTouchUpInside];
+    clickBtn.center = self.view.center;
+    [self.view addSubview:clickBtn];
+}
+
+- (void)nextVC {
+    BlueToothViewController *vc = [[BlueToothViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
+    
+    
+//    EndLessViewController *vc = [[EndLessViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
+}
+
 
 - (void)playMp3 {
     UIButton *clickBtn = [UIButton buttonWithType:UIButtonTypeCustom];
