@@ -13,7 +13,7 @@
 #import "CollectionViewController.h"
 #import "EndLessViewController.h"
 #import "BlueToothViewController.h"
-
+#import "EndLessTableViewViewController.h"
 @interface ViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UITableView *myTableView;
@@ -44,9 +44,11 @@
 }
 
 - (void)nextVC {
-    BlueToothViewController *vc = [[BlueToothViewController alloc] init];
+    EndLessTableViewViewController *vc = [[EndLessTableViewViewController alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
     
+//    BlueToothViewController *vc = [[BlueToothViewController alloc] init];
+//    [self.navigationController pushViewController:vc animated:YES];
     
 //    EndLessViewController *vc = [[EndLessViewController alloc] init];
 //    [self.navigationController pushViewController:vc animated:YES];

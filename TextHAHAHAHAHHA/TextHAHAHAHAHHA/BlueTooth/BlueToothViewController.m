@@ -19,8 +19,8 @@ typedef NS_ENUM(NSInteger, BluetoothState){
     BluetoothStateScaning,
     BluetoothStateConnected,
     BluetoothStateConnecting
-    
 };
+
 typedef NS_ENUM(NSInteger, BluetoothFailState){
     BluetoothFailStateUnExit = 0,
     BluetoothFailStateUnKnow,
@@ -28,9 +28,7 @@ typedef NS_ENUM(NSInteger, BluetoothFailState){
     BluetoothFailStateByOff,
     BluetoothFailStateUnauthorized,
     BluetoothFailStateByTimeout
-    
 };
-
 
 @interface BlueToothViewController ()<UITableViewDelegate, UITableViewDataSource, CBCentralManagerDelegate, CBPeripheralDelegate>
 
@@ -134,7 +132,6 @@ typedef NS_ENUM(NSInteger, BluetoothFailState){
     //设定周边设备，指定代理者
     _discoveredPeripheral = cbp;
     _discoveredPeripheral.delegate = self;
-    
     [_manage connectPeripheral:_discoveredPeripheral options:@{CBConnectPeripheralOptionNotifyOnConnectionKey:@YES}];
 }
 
@@ -203,7 +200,6 @@ typedef NS_ENUM(NSInteger, BluetoothFailState){
 
 - (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary<NSString *, id> *)advertisementData RSSI:(NSNumber *)RSSI {
     //要判断获取自己的蓝牙名字
-    
     NSString *perlname = [NSString stringWithFormat:@"%@", peripheral.name];
     NSLog(@"perlname   ====   %@", perlname);
     NSLog(@"advertisementData ===  %@", advertisementData);
@@ -212,6 +208,7 @@ typedef NS_ENUM(NSInteger, BluetoothFailState){
     }
     [_myTableView reloadData];
 }
+
 #pragma mark - CBPeripheralDelegate
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     

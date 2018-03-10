@@ -7,10 +7,21 @@
 //
 
 #import "EndLessUITableView.h"
+#import "SUTableViewInterceptor.h"
+
+
+@interface EndLessUITableView ()
+
+@property (nonatomic, strong) SUTableViewInterceptor *dataSourceInterceptor;
+
+@property (nonatomic, assign) NSInteger actualRows;
+
+@end
 
 @implementation EndLessUITableView
 
 - (void)layoutSubviews {
+    [self resetContentOffsetIfNeeded];
     [super layoutSubviews];
 }
 
@@ -29,12 +40,29 @@
 }
 
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setDataSource:(id<UITableViewDataSource>)dataSource {
+    [super setDataSource:dataSource];
+    self.dataSourceInterceptor.receive = dataSource;
 }
-*/
+
+- (SUTableViewInterceptor *)dataSourceInterceptor {
+    if (_dataSourceInterceptor == nil) {
+        _dataSourceInterceptor = [[SUTableViewInterceptor alloc] init];
+    }
+    return _dataSourceInterceptor;
+}
+
+- (NSInteger)tableView:(UITableView*)tableView numberOfRowsInSection:(NSInteger)section {
+    self.actualRows = [self.dataSourceInterceptor.receive tableView:tableView numberOfRowsInSection:section];
+    return self.actualRows * 3;
+}
+
+- (UITableViewCell*)tableView:(UITableView*)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSIndexPath *actulIndexPath = [NSIndexPath indexPathForRow:indexPath.row % self.actualRows inSection:indexPath.section];
+    return [self.dataSourceInterceptor.receive tableView:tableView cellForRowAtIndexPath:actulIndexPath];
+}
+
+
+
 
 @end
